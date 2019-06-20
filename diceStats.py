@@ -2,7 +2,8 @@
 TO DO LIST:
 - Check for empty list
 - Implement matplotlib for distribution graph
-- finish getMode
+- Finish getMode
+- Implement with OOP
 """
 
 import random
@@ -29,7 +30,10 @@ getMode prints the element that occurs the most in the data and
 returns it.
 """
 def getMode(data):
-    return
+    mode = max(set(data), key=data.count)
+    print('Mode: ' + str(mode))
+    return mode;
+
 
 """
 getMedian sorts a list from smallest to largest then
@@ -47,13 +51,14 @@ def getMedian(data):
     return median
 
 
-list = []
-sample_size = 10
+list = [1, 1, 1, 1, 2, 2, 2, 2]
+sample_size = 8
 print('Rolling...')
-for n in range(sample_size):
-    list.append(roll())
+#for n in range(sample_size):
+    #list.append(roll())
 print('Sample data has been gathered.')
 list.sort() #Not needed, but good for visuals
 print(list) #Not needed, but good for visuals
 getMedian(list)
 getMean(list)
+getMode(list)
